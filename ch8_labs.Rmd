@@ -169,13 +169,13 @@ tree.pred = predict(prune.carseats, Carseats.test, type="class")
 table(tree.pred,High.test)
 mytable_pruned <- table(tree.pred,High.test)
 ((mytable_pruned["No", "No"] + mytable_pruned["Yes","Yes"] )/ sum(mytable_pruned) ) 
-# from book: (94+60)/200 
+
 # Now 77.5% of the test observatiosn are correctly classified
 ```
 
 ### Tree Pruning - Manually pick
 
-* If we increases the value of 'best', we obtain a larger pruned tree
+* If we increase the value of 'best', we obtain a larger pruned tree
 
 ```{r echo=TRUE}
 prune.carseats = prune.misclass(tree.carseats, best=15)# increased from 9
@@ -226,7 +226,7 @@ summary(tree.boston)
 
 * Higher values of rm correspond to more expensive houses 
 
-* The tree precits median house price of $45,380 for larger homes in the suburbs with more rooms (rm >=7.553)
+* The tree predicts median house price of $45,380 for larger homes in the suburbs with more rooms (rm >=7.553)
 
 ```{r echo=TRUE}
 plot(tree.boston)
